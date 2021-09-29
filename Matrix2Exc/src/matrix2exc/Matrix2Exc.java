@@ -7,7 +7,7 @@ quando houver, conforme exemplo.*/
 package matrix2exc;
 public class Matrix2Exc {
     public static void main(String[] args) {
-        // TODO code application logic here
+        
     }
     
 }

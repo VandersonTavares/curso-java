@@ -4,6 +4,7 @@
 nbproject/private/
 nbproject
 build.xml
+manifest.mf
 nbbuild/
 dist/
 nbdist/
