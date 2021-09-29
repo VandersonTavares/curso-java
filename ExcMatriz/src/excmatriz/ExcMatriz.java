@@ -25,8 +25,8 @@ public class ExcMatriz {
         System.out.print("Digite um numero da matriz: ");
         int num = sc.nextInt();
 
-          for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
+          for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
                 if(matriz[i][j] == num){
   
                 System.out.println("Position: "+i + ", "+j);
