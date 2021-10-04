@@ -2,6 +2,7 @@ package entities;
 
 import entities.enums.WorkerLevel;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class Worker {
@@ -74,7 +75,22 @@ public class Worker {
     //remove o contrato da lista
     public void removeContract(HourContract contract){
         contracts.remove(contract); 
-        
     }
+    
+    public double income(int year, int month){
+        double sum = baseSalary;
+        Calendar cal = Calendar.getInstance();
+        for(HourContract c: contracts){ 
+            cal.setTime(c.getDate()); //Peguei a data do contrato MM/YYYY e joguei na variavel cal
+                int c_year = cal.get(Calendar.YEAR); //recuperei o ANO da data setada
+                int c_month = 1+ cal.get(Calendar.MONTH);//recuperei o MES da data setada.; Jan = 0 por isso o +1
+            if(c_year == year && c_month == month){
+                sum += c.totalValue();
+            }
+        }
+        return sum;
+    }
+    
+    
     
 }
