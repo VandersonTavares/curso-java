@@ -15,6 +15,7 @@ public class Programa {
     public static void main(String[] args) {
 
         List<Product> lista = new ArrayList<>();
+        //
 
         //defini o endereço
         String path = "C:\\temp\\source.txt";
